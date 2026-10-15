@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
@@ -41,3 +41,6 @@ Route::get('/matakuliah/{kode}/edit', [MatakuliahController::class, 'edit']);
 Route::put('/matakuliah/{kode}', [MatakuliahController::class, 'update']);
 
 Route::delete('/matakuliah/{kode}', [MatakuliahController::class, 'destroy']);
+
+Route::get('/home', [HomeController::class, 'index']);
+//tes
